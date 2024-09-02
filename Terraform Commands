@@ -1,0 +1,13 @@
+terraform init
+terraform validate
+terraform plan
+terraform apply
+After that change the instance-type to t2.medium and save it
+terraform apply ------ so here automatically it will destroy the t2.micro server and create a t2.medium server
+Next after that destroy the server -------- terraform destroy
+Next if you want back up of the server with the instance type t2.medium you can create it through the terraform.tfstate.backup file
+cp terraform.tfstate.backup terraform.tfstate ------------ It will copy your instance configurations from backup file to tfstate file and then create your instance by terraform apply.
+ terraform validate
+ terraform apply
+ terraform destroy
+  
